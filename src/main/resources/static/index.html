@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <title> You can write something </title>
+    <h1 style="margin-left:220px;">You can write something</h1>
+
+</head>
+<body style="background-color: #FFF8DC; ">
+<div class="w-50 p-3" style="background-color:#000000; height: 250px; margin-left:200px;">
+
+<form action="/index" method="get" onsubmit="return getElement()">
+
+    <input type="text" id="text" name="input" class="form-control">
+    <button type="submit" class="btn btn-warning">Revers</button>
+
+</form>
+    <form action="greetHello"  onsubmit="return getElement()">
+        <button type="submit" class="btn btn-secondary">Submit</button>
+    </form>
+</div>
+
+<script>
+function getElement() {
+  var text = document.getElementById("text").value;
+  if(text.length == 0){
+  alert("You have to write something")
+  return false;
+  }else {
+  submitOK = "true";
+  }
+
+  }
+
+
+
+</script>
+</body>
+</html>
